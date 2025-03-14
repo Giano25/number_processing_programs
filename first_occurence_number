@@ -1,20 +1,12 @@
-#Input 10 numbers
+seen_numbers = []
+final_list = []
+print("Enter 10 numbers:")
 
-number = []
-for i in range (10):
-    num = float(input("Input a value:"))
-    number.append(num)
+for counter in range(1, 11):
+    user_num = float(input(f"Input #{counter}: "))
+    if user_num not in seen_numbers:
+        seen_numbers.append(user_num)
+        final_list.append(user_num)
 
-print("Unique numbers:")
-for num in number:
-    if number.count(num) == 1:  # Simple duplicate check
-        print(num, end=" ")
-
-seen = []
-result = []
-for x in range(10):
-    n = float(input("Enter number: "))
-    if n not in seen:
-        seen.append(n)
-        result.append(n)
-print(result)
+print("\nFirst occurrences:")
+print(" → ".join(map(str, final_list)))
