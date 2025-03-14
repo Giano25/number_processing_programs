@@ -1,0 +1,6 @@
+print("Enter numbers (Invalid input to stop):")
+
+while True:
+    num = input("Enter a number: ")
+    if not num.isdigit():  
+        break
