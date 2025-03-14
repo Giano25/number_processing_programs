@@ -8,8 +8,15 @@ while True:
         break
     
     num = int(num)  
-    
-    if num in numbers:
+    is_duplicate = False
+
+    # Check for duplicates
+    for n in numbers:
+        if n == num:
+            is_duplicate = True
+            break
+
+    if is_duplicate:
         print("Duplicate")
     else:
         print("Unique")
