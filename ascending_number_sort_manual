@@ -1,12 +1,21 @@
 print("Enter numbers (Invalid input to stop):")
 
-numbers = []  # List to store inputted numbers
+numbers = []
 
 while True:
     num = input("Enter a number: ")
     
-    if not num.isdigit():  # Stops when input is invalid
+    if not num.isdigit():
         break
     
-    num = int(num)  # Convert input to integer
-    numbers.append(num)  # Store numbers
+    num = int(num)
+    numbers.append(num)  
+
+# Bubble Sort Implementation (Sorting from lowest to highest)
+n = len(numbers)
+for i in range(n - 1):
+    for j in range(n - 1 - i):
+        if numbers[j] > numbers[j + 1]:
+            temp = numbers[j]  
+            numbers[j] = numbers[j + 1]
+            numbers[j + 1] = temp
