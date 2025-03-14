@@ -1,0 +1,12 @@
+print("Enter numbers (Invalid input to stop):")
+
+numbers = []  # List to store inputted numbers
+
+while True:
+    num = input("Enter a number: ")
+    
+    if not num.isdigit():  # Stops when input is invalid
+        break
+    
+    num = int(num)  # Convert input to integer
+    numbers.append(num)  # Store numbers
