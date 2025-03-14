@@ -8,7 +8,13 @@ while True:
     if not num.isdigit():
         break
 
-    num = int(num)  
+    num = int(num)
 
-    if lowest is None or num < lowest:  
+    if lowest is None or num < lowest:
         lowest = num  
+
+# Check if a number was entered before displaying
+if lowest is not None:
+    print("Lowest number:", lowest)
+else:
+    print("No valid numbers were entered.")
