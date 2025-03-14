@@ -1,0 +1,6 @@
+#Input 10 numbers
+
+number = []
+for i in range (10):
+    num = float(input("Input a value:"))
+    number.append(num)
