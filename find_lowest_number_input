@@ -1,6 +1,14 @@
 print("Enter numbers (Invalid input to stop):")
 
+lowest = None  
+
 while True:
     num = input("Enter a number: ")
-    if not num.isdigit():  
+
+    if not num.isdigit():
         break
+
+    num = int(num)  
+
+    if lowest is None or num < lowest:  
+        lowest = num  
